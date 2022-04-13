@@ -70,6 +70,8 @@
     <Content Include="ficheOuvrage.aspx" />
     <Content Include="img\1.png" />
     <Content Include="listeOuvrages.aspx" />
+    <Content Include="NouvelOuvrage.aspx" />
+    <Content Include="NouvelOuvrageCode.aspx" />
     <Content Include="OuvragesParClassification.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -94,6 +96,20 @@
     </Compile>
     <Compile Include="listeOuvrages.aspx.designer.cs">
       <DependentUpon>listeOuvrages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NouvelOuvrage.aspx.cs">
+      <DependentUpon>NouvelOuvrage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NouvelOuvrage.aspx.designer.cs">
+      <DependentUpon>NouvelOuvrage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NouvelOuvrageCode.aspx.cs">
+      <DependentUpon>NouvelOuvrageCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NouvelOuvrageCode.aspx.designer.cs">
+      <DependentUpon>NouvelOuvrageCode.aspx</DependentUpon>
     </Compile>
     <Compile Include="OuvragesParClassification.aspx.cs">
       <DependentUpon>OuvragesParClassification.aspx</DependentUpon>

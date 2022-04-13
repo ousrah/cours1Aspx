@@ -19,16 +19,42 @@
                     <asp:BoundField DataField="ANNEEPARU" HeaderText="ANNEEPARU" SortExpression="ANNEEPARU" />
                     <asp:BoundField DataField="NUMRUB" HeaderText="NUMRUB" SortExpression="NUMRUB" />
                     <asp:BoundField DataField="NOMED" HeaderText="NOMED" SortExpression="NOMED" />
+                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
                 </Fields>
                 <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
                 <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
                 <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
                 <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
             </asp:DetailsView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:librairieConnectionString %>" FilterExpression="NUMOUVR = {0}" SelectCommand="SELECT * FROM [OUVRAGE]">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:librairieConnectionString %>" FilterExpression="NUMOUVR = {0}" SelectCommand="SELECT * FROM [OUVRAGE]" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [OUVRAGE] WHERE [NUMOUVR] = @original_NUMOUVR AND [NOMOUVR] = @original_NOMOUVR AND (([ANNEEPARU] = @original_ANNEEPARU) OR ([ANNEEPARU] IS NULL AND @original_ANNEEPARU IS NULL)) AND (([NUMRUB] = @original_NUMRUB) OR ([NUMRUB] IS NULL AND @original_NUMRUB IS NULL)) AND (([NOMED] = @original_NOMED) OR ([NOMED] IS NULL AND @original_NOMED IS NULL))" InsertCommand="INSERT INTO [OUVRAGE] ([NUMOUVR], [NOMOUVR], [ANNEEPARU], [NUMRUB], [NOMED]) VALUES (@NUMOUVR, @NOMOUVR, @ANNEEPARU, @NUMRUB, @NOMED)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [OUVRAGE] SET [NOMOUVR] = @NOMOUVR, [ANNEEPARU] = @ANNEEPARU, [NUMRUB] = @NUMRUB, [NOMED] = @NOMED WHERE [NUMOUVR] = @original_NUMOUVR AND [NOMOUVR] = @original_NOMOUVR AND (([ANNEEPARU] = @original_ANNEEPARU) OR ([ANNEEPARU] IS NULL AND @original_ANNEEPARU IS NULL)) AND (([NUMRUB] = @original_NUMRUB) OR ([NUMRUB] IS NULL AND @original_NUMRUB IS NULL)) AND (([NOMED] = @original_NOMED) OR ([NOMED] IS NULL AND @original_NOMED IS NULL))">
+                <DeleteParameters>
+                    <asp:Parameter Name="original_NUMOUVR" Type="Int32" />
+                    <asp:Parameter Name="original_NOMOUVR" Type="String" />
+                    <asp:Parameter Name="original_ANNEEPARU" Type="Int16" />
+                    <asp:Parameter Name="original_NUMRUB" Type="Int32" />
+                    <asp:Parameter Name="original_NOMED" Type="String" />
+                </DeleteParameters>
                 <FilterParameters>
                     <asp:QueryStringParameter Name="newparameter" QueryStringField="c" />
                 </FilterParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="NUMOUVR" Type="Int32" />
+                    <asp:Parameter Name="NOMOUVR" Type="String" />
+                    <asp:Parameter Name="ANNEEPARU" Type="Int16" />
+                    <asp:Parameter Name="NUMRUB" Type="Int32" />
+                    <asp:Parameter Name="NOMED" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="NOMOUVR" Type="String" />
+                    <asp:Parameter Name="ANNEEPARU" Type="Int16" />
+                    <asp:Parameter Name="NUMRUB" Type="Int32" />
+                    <asp:Parameter Name="NOMED" Type="String" />
+                    <asp:Parameter Name="original_NUMOUVR" Type="Int32" />
+                    <asp:Parameter Name="original_NOMOUVR" Type="String" />
+                    <asp:Parameter Name="original_ANNEEPARU" Type="Int16" />
+                    <asp:Parameter Name="original_NUMRUB" Type="Int32" />
+                    <asp:Parameter Name="original_NOMED" Type="String" />
+                </UpdateParameters>
             </asp:SqlDataSource>
         </div>
         <a href ="listeOuvrages.aspx">Retour à la liste</a>
