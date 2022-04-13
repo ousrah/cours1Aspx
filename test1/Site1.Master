@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="test1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #wrapper {
+            border: medium solid #000000;
+            margin: auto;
+            width: 80%;
+        }
+        #banniere {
+            background-color: #3B4F81;
+            text-align: center;
+            width: 90px;
+            border: thin solid #000000;
+            color: #FFFFFF;
+        }
+        .auto-style1 {
+            font-size: small;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table id="wrapper">
+                <tr>
+                    <th id="banniere">
+                        
+                        
+                        <h1>Bannière</h1> <br />
+                        <br />
+                        <br />
+                    </th>
+                    
+                </tr>
+                 <tr>
+                     <td id="Menu">
+                         <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                             <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                             <DynamicMenuStyle BackColor="#B5C7DE" />
+                             <DynamicSelectedStyle BackColor="#507CD1" />
+                             <Items>
+                                 <asp:MenuItem NavigateUrl="~/WebForm3.aspx" Text="Ouvrages" Value="Ouvrages"></asp:MenuItem>
+                                 <asp:MenuItem NavigateUrl="~/WebForm4.aspx" Text="Classifications" Value="Classifications"></asp:MenuItem>
+                                 <asp:MenuItem Text="Editeurs" Value="Editeurs"></asp:MenuItem>
+                                 <asp:MenuItem Text="Contactez nous" Value="Contactez nous"></asp:MenuItem>
+                             </Items>
+                             <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                             <StaticSelectedStyle BackColor="#507CD1" />
+                         </asp:Menu>
+                        <br />
+                       
+                        <br />
+                         </td>
+                           </tr>
+                 <tr>
+
+                                 <td> <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+
+            </asp:ContentPlaceHolder></td>
+                                 
+           
+
+
+
+                     </td>
+                      
+                </tr>
+                 <tr>     
+                    <td id="content">
+                        <br />
+                        <br />
+                     </td>
+                    
+                </tr>
+                 <tr>
+                    <td id="footer" class="auto-style1">CopyRight ISMO 2022</td>
+                    
+                </tr>
+            </table>
+
+
+
+        </div>
+    </form>
+</body>
+</html>
