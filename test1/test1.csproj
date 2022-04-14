@@ -67,12 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="deconnection.aspx" />
     <Content Include="ficheOuvrage.aspx" />
     <Content Include="img\1.png" />
     <Content Include="listeOuvrages.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="NouvelOuvrage.aspx" />
     <Content Include="NouvelOuvrageCode.aspx" />
     <Content Include="OuvragesParClassification.aspx" />
+    <Content Include="sessionApplication.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -83,6 +86,13 @@
     <Content Include="WebForm7.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="deconnection.aspx.cs">
+      <DependentUpon>deconnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deconnection.aspx.designer.cs">
+      <DependentUpon>deconnection.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ficheOuvrage.aspx.cs">
       <DependentUpon>ficheOuvrage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,6 +106,13 @@
     </Compile>
     <Compile Include="listeOuvrages.aspx.designer.cs">
       <DependentUpon>listeOuvrages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="NouvelOuvrage.aspx.cs">
       <DependentUpon>NouvelOuvrage.aspx</DependentUpon>
@@ -119,6 +136,13 @@
       <DependentUpon>OuvragesParClassification.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sessionApplication.aspx.cs">
+      <DependentUpon>sessionApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sessionApplication.aspx.designer.cs">
+      <DependentUpon>sessionApplication.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -12,6 +12,19 @@ namespace test1
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["pass"] != null)
+            {
+                if (Session["pass"].ToString() != "ok")
+                    Response.Redirect("login.aspx");
+            }
+
+            else
+                Response.Redirect("login.aspx");
+        }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        {
+
         }
     }
 }
