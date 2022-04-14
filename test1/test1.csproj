@@ -72,6 +72,7 @@
     <Content Include="img\1.png" />
     <Content Include="listeOuvrages.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="mailing.aspx" />
     <Content Include="NouvelOuvrage.aspx" />
     <Content Include="NouvelOuvrageCode.aspx" />
     <Content Include="OuvragesParClassification.aspx" />
@@ -113,6 +114,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mailing.aspx.cs">
+      <DependentUpon>mailing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailing.aspx.designer.cs">
+      <DependentUpon>mailing.aspx</DependentUpon>
     </Compile>
     <Compile Include="NouvelOuvrage.aspx.cs">
       <DependentUpon>NouvelOuvrage.aspx</DependentUpon>
