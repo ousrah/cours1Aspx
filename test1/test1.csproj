@@ -70,6 +70,8 @@
     <Content Include="deconnection.aspx" />
     <Content Include="ficheOuvrage.aspx" />
     <Content Include="img\1.png" />
+    <Content Include="inscription.aspx" />
+    <Content Include="inscriptionEffectuee.aspx" />
     <Content Include="listeOuvrages.aspx" />
     <Content Include="login.aspx" />
     <Content Include="mailing.aspx" />
@@ -77,6 +79,7 @@
     <Content Include="NouvelOuvrageCode.aspx" />
     <Content Include="OuvragesParClassification.aspx" />
     <Content Include="sessionApplication.aspx" />
+    <Content Include="validationInscription.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -100,6 +103,20 @@
     </Compile>
     <Compile Include="ficheOuvrage.aspx.designer.cs">
       <DependentUpon>ficheOuvrage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inscription.aspx.cs">
+      <DependentUpon>inscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inscription.aspx.designer.cs">
+      <DependentUpon>inscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inscriptionEffectuee.aspx.cs">
+      <DependentUpon>inscriptionEffectuee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inscriptionEffectuee.aspx.designer.cs">
+      <DependentUpon>inscriptionEffectuee.aspx</DependentUpon>
     </Compile>
     <Compile Include="listeOuvrages.aspx.cs">
       <DependentUpon>listeOuvrages.aspx</DependentUpon>
@@ -157,6 +174,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="validationInscription.aspx.cs">
+      <DependentUpon>validationInscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="validationInscription.aspx.designer.cs">
+      <DependentUpon>validationInscription.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

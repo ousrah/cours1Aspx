@@ -54,6 +54,10 @@
             </table>
             <asp:Label ID="lblErr" runat="server" ForeColor="Red" Text="Login ou mot de passe incorrect" Visible="False"></asp:Label>
 
+              <br />
+              <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/inscription.aspx">Inscription</asp:HyperLink>
+              <br />
+
         </div>
     </form>
 </body>

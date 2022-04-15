@@ -17,10 +17,19 @@
             <asp:TextBox ID="TextBox2" runat="server" Width="527px"></asp:TextBox>
             <br />
             Message :<br />
-            <asp:TextBox ID="TextBox3" runat="server" Height="214px" TextMode="MultiLine" Width="650px"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" Height="214px" OnClientClick="Encode()"  TextMode="MultiLine" Width="650px"></asp:TextBox>
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="envoyer" />
+            <asp:Button ID="Button1" runat="server" OnClientClick="Encode()" OnClick="Button1_Click" Text="envoyer" />
         </div>
     </form>
+ <script>
+  function Encode() {
+   var value = (document.getElementById('TextBox3').value);
+   value = value.replaceAll('<', "&lt;");
+   value = value.replaceAll('>', "&gt;");
+   document.getElementById('TextBox3').value = value;
+  }
+    </script>
+    
 </body>
 </html>

@@ -21,7 +21,9 @@ namespace test1
             MailMessage mail = new MailMessage();
             mail.From = new MailAddress("tdi2022@outlook.fr");
             mail.Subject = TextBox1.Text;
-            mail.Body = "inscription à <b> ismo.ma</b><br /><br /><a href = 'https://www.ismo.ma' > Suivez le lien</ a > ";
+            //mail.Body = "inscription à <b> ismo.ma</b><br /><br /><a href = 'https://www.ismo.ma' > Suivez le lien</ a > ";
+            mail.Body =Server.HtmlDecode(TextBox3.Text);
+
             mail.IsBodyHtml = true;
          /*   foreach (var attachment in attachments)
                 mail.Attachments.Add(new Attachment(attachment));

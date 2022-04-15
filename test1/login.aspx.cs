@@ -18,7 +18,7 @@ namespace test1
         {
             SqlConnection cn = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=librairie;User ID=sa;Password=P@ssw0rd");
             cn.Open();
-            SqlCommand cmd = new SqlCommand("select * from [user] where email = '" +txtLogin.Text + "'", cn);
+            SqlCommand cmd = new SqlCommand("select * from [user] where valide=1 and email = '" +txtLogin.Text + "'", cn);
             SqlDataReader dr = cmd.ExecuteReader();
            Session["pass"] = "";
           if(dr.Read())
