@@ -72,6 +72,7 @@
     <Content Include="img\1.png" />
     <Content Include="inscription.aspx" />
     <Content Include="inscriptionEffectuee.aspx" />
+    <Content Include="lesCookies.aspx" />
     <Content Include="listeOuvrages.aspx" />
     <Content Include="login.aspx" />
     <Content Include="mailing.aspx" />
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="inscriptionEffectuee.aspx.designer.cs">
       <DependentUpon>inscriptionEffectuee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lesCookies.aspx.cs">
+      <DependentUpon>lesCookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lesCookies.aspx.designer.cs">
+      <DependentUpon>lesCookies.aspx</DependentUpon>
     </Compile>
     <Compile Include="listeOuvrages.aspx.cs">
       <DependentUpon>listeOuvrages.aspx</DependentUpon>
