@@ -58,6 +58,10 @@
               <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/inscription.aspx">Inscription</asp:HyperLink>
               <br />
 
+              <br />
+              <br />
+              <asp:CheckBox ID="CheckBox1" runat="server" Text="Garder la session ouverte" />
+
         </div>
     </form>
 </body>

@@ -12,6 +12,10 @@ namespace test1
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["pass"] = "";
+            HttpCookie cookie = Request.Cookies["login"];
+            cookie.Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies.Add(cookie);
+
             Response.Redirect("login.aspx");
         }
     }
