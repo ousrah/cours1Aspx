@@ -59,6 +59,7 @@
                                  <asp:MenuItem Text="Editeurs" Value="Editeurs"></asp:MenuItem>
                                  <asp:MenuItem Text="Contactez nous" Value="Contactez nous"></asp:MenuItem>
                                  <asp:MenuItem NavigateUrl="~/deconnection.aspx" Text="se déconnecter&nbsp;" Value="se déconnecter"></asp:MenuItem>
+                                 <asp:MenuItem NavigateUrl="~/UseCrystalReport.aspx" Text="crystal report" Value="crystal report"></asp:MenuItem>
                              </Items>
                              <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
                              <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
